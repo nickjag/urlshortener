@@ -26,6 +26,8 @@ If the above URL is not loading, in your system's etc/hosts file, add the follow
 
 `192.168.10.10  homestead.app`
 
+The app is currently set to use SQLite. 
+
 ## Quick Testing
 
 An automatic functional test will test all API calls and data, just type: 
@@ -137,9 +139,11 @@ GET Parameters
 &short=http%3A%2F%2Fhomestead.app%2Fu%2FR6el7whunEYE
 ```
 
-## Database Reset
+## Database
 
-To clear the database:
+The app is currently configured to use SQLite.
+
+To clear/refresh the database:
 
 `php artisan migrate:refresh`
 

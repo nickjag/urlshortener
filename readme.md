@@ -30,11 +30,11 @@ If the above URL is not loading, in your system's etc/hosts file, add the follow
 
 An automatic functional test will test all API calls and data, just type: 
 
-```vendor/bin/phpunit```
+`vendor/bin/phpunit`
 
 Request the following in your browser to get a list of all current shortened URLs and corresponding data:
 
-```http://homestead.app/api/urls```
+`http://homestead.app/api/urls`
 
 ## Return Data
 
@@ -51,23 +51,23 @@ The number of redirects is based on unique shortened URLs, not devices.
 **Shorten a target URL:**
 
 POST
-```/api/urls```
+`/api/urls`
 
 JSON Body
-~~~
+```json
 {
 	"user":1,
 	"target":"http://www.google.com"
 }
-~~~
+```
 
 **Get all shortened URLs:**
 
 GET
-```/api/urls```
+`/api/urls`
 
 Sample Response
-~~~
+```json
 [{
 "short":"http:\/\/homestead.app\/u\/axk6rXcPapGZ",
 "second_ago":2,
@@ -86,27 +86,27 @@ Sample Response
 		}
 	}
 }]
-~~~
+```
 
 **Get shortened URLs by user (id):**
 
 GET
-```/api/urls/{user-id}```
+`/api/urls/{user-id}`
 
 **Modify a target URL by device type:**
 
 PUT
-```/api/urls```
+`/api/urls`
 
 **JSON Body**
-~~~
+```json
 {
 	"user":1,
 	"target":"http://www.google.com",
 	"device":"desktop",
 	"short":"http://homestead.app/u/R6el7whunEYE"
 }
-~~~
+```
 
 ## URL Convenience Testing
 
@@ -116,40 +116,36 @@ Make sure to url-encode any parameters passed.
 **Shorten a target URL**
 
 GET
-```/tests/store```
+`/tests/store`
 
 GET Parameters
-~~~
-{
+```
 	?user=1
 	&target=http%3A%2F%2Fwww.google.com
-}
-~~~
+```
 
 **Modify a target URL by device type:**
 
 GET
-```/tests/update```
+`/tests/update`
 
 GET Parameters
-~~~
-{
+```
 	?user=1
 	&target=http%3A%2F%2Fwww.google.com
 	&device=desktop
 	&short=http%3A%2F%2Fhomestead.app%2Fu%2FR6el7whunEYE
-}
-~~~
+```
 
 ## Database Reset
 
 To clear the database:
 
-```php artisan migrate:refresh```
+`php artisan migrate:refresh`
 
 Stop vagrant:
 
-```vagrant destroy --force```
+`vagrant destroy --force`
 
 ## Future Considerations
 

@@ -120,8 +120,8 @@ GET
 
 GET Parameters
 ```
-	?user=1
-	&target=http%3A%2F%2Fwww.google.com
+?user=1
+&target=http%3A%2F%2Fwww.google.com
 ```
 
 **Modify a target URL by device type:**
@@ -131,10 +131,10 @@ GET
 
 GET Parameters
 ```
-	?user=1
-	&target=http%3A%2F%2Fwww.google.com
-	&device=desktop
-	&short=http%3A%2F%2Fhomestead.app%2Fu%2FR6el7whunEYE
+?user=1
+&target=http%3A%2F%2Fwww.google.com
+&device=desktop
+&short=http%3A%2F%2Fhomestead.app%2Fu%2FR6el7whunEYE
 ```
 
 ## Database Reset
